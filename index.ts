@@ -191,7 +191,7 @@ class npm {
 		}
 	}
 
-	runAsync(script: string) {
+	runAsync(script: string): Promise<string> {
 		const args = this.args ? `-- ${this.args.join(" ")}` : "";
 		return new Promise((resolve, reject) => {
 			try {

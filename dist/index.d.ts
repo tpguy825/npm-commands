@@ -47,7 +47,7 @@ declare class npm {
     unlink(module?: string): string | null;
     unlinkAsync(module?: string): Promise<string>;
     run(script: string): string | null;
-    runAsync(script: string): Promise<unknown>;
+    runAsync(script: string): Promise<string>;
 }
 export default function (): npm;
 export {};
