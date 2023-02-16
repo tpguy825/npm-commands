@@ -36,7 +36,7 @@ var npm = /** @class */ (function () {
      * // This will run `npm install express --no-save` if run with `node index.js --no-save`
      *
      * npm().arguments(false).install("express", { save: true, saveDev: true })
-     * // This will run `npm install express --save` regardless of arguments passed to the script
+     * // This will run `npm install express --save`, aswell as arguments passed to the script
      * // --save has priority over --save-dev
      */
     npm.prototype.arguments = function (args) {
