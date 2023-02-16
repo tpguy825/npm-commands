@@ -1,18 +1,29 @@
 {
-  "name": "npm-commands",
-  "version": "1.0.2",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo 'This will be echoing this string.'"
-  },
-  "keywords": [
-    "npm",
-    "commands",
-    "programmatically"
-  ],
-  "author": "Flavio Tulino",
-  "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {},
-  "description": "Run npm commands programmatically"
+	"name": "@tpguy825/npm-commands",
+	"version": "1.1.1",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "tsc index --outDir dist --sourceMap --declaration --declarationMap"
+	},
+	"keywords": [
+		"npm",
+		"commands",
+		"programmatically"
+	],
+	"devDependencies": {
+		"@types/node": "^14.14.31",
+		"typescript": "^4.2.4"
+	},
+	"author": "tpguy825",
+	"license": "ISC",
+	"description": "Fork of original by Flavio Tulino.",
+	"types": "dist/index.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/tpguy825/npm-commands.git"
+	},
+	"bugs": {
+		"url": "https://github.com/tpguy825/npm-commands/issues"
+	},
+	"homepage": "https://github.com/tpguy825/npm-commands#readme"
 }
