@@ -19,7 +19,7 @@ declare class npm {
      * npm().arguments({}).install("express", { save: true })
      * // This will run `npm install express --save` regardless of arguments passed to the script
      *
-     * npm().arguments({}).install("express", { saveDev: true })
+     * npm().arguments(false).install("express", { saveDev: true })
      * // This will run `npm install express --save-dev` regardless of arguments passed to the script
      *
      * npm().arguments(false).install("express")
@@ -31,7 +31,7 @@ declare class npm {
      */
     arguments(args: {
         [key: string]: string | string[];
-    } | false): this;
+    } | boolean): this;
     install(module?: string, { save, saveDev }?: {
         save?: boolean;
         saveDev?: boolean;
