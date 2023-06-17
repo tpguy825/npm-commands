@@ -9,26 +9,7 @@ declare class npm {
     cwd(dir: string | undefined): this;
     /** Should the output be displayed in the console? */
     output(value?: boolean): this;
-    /** Arguments to run the command with
-     * @example
-     * npm().arguments({
-     * 		"--no-save": "",
-     * }).install("express")
-     * // This will run `npm install express --no-save`
-     *
-     * npm().arguments({}).install("express", { save: true })
-     * // This will run `npm install express --save` regardless of arguments passed to the script
-     *
-     * npm().arguments(false).install("express", { saveDev: true })
-     * // This will run `npm install express --save-dev` regardless of arguments passed to the script
-     *
-     * npm().arguments(false).install("express")
-     * // This will run `npm install express --no-save` if run with `node index.js --no-save`
-     *
-     * npm().arguments(false).install("express", { save: true, saveDev: true })
-     * // This will run `npm install express --save`, aswell as arguments passed to the script
-     * // --save has priority over --save-dev
-     */
+    /** Arguments to run the command with */
     arguments(args: {
         [key: string]: string | string[];
     } | boolean): this;
